@@ -56,6 +56,7 @@ export default function HomePage() {
                                 { icon: 'headphones', text: 'Let yourself be driven, save money and enjoy sharing a ride' }
                             ]}
                             btnName='Join As A Passenger'
+                            onClick={handleClickForDriver}
                         />
                     </div>
                 </div>
