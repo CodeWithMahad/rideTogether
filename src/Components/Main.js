@@ -1,7 +1,6 @@
 import React from 'react'
 import homePic1 from '../Images/homePic1.jpg'
 import Card from './Card';
-import AvailableRide from './AvailableRide';
 import Navbar from './Navbar';
 import Footer from './Footer';
 
@@ -12,7 +11,14 @@ export default function Main() {
     };
     return (
         <>
-        <Navbar/>
+            <Navbar links={[
+                { name: 'Home', path: '/' },
+                { name: 'Available Rides', path: '/rides' },
+                { name: 'Profile', path: '/profile' },
+                { name: 'Support', path: '/support' },
+                { name: 'Logout', path: '/' },
+            ]} />
+
             <div className='mt-5 pt-5 w-100' style={{ ...divStyle, height: '91.5vh' }}>
                 <div className="container">
                     <div className="col-3 mt-5 pt-5 ms-4">
@@ -24,11 +30,8 @@ export default function Main() {
                     </div>
                 </div>
             </div>
-            <div className="container">
-                <AvailableRide/>
-            </div>
             <div className="container mt-5">
-            <h1 className="display-6 fw-bold text-start" style={{ color: '#091F5B' }}>Why Ride Together ?</h1>
+                <h1 className="display-6 fw-bold text-start" style={{ color: '#091F5B' }}>Why Ride Together ?</h1>
                 <div className="row">
                     <div className="col-lg-4">
                         <Card message='At Ride Together, we prioritize your safety above all else. Our cab booking service is designed to provide you with a secure and comfortable travel experience.' />
@@ -41,7 +44,7 @@ export default function Main() {
                     </div>
                 </div>
             </div>
-            <Footer/>
+            <Footer />
         </>
     )
 }

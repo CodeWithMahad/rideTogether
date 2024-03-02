@@ -1,6 +1,7 @@
-import React from 'react'
-import {NavLink} from 'react-router-dom'
-export default function Navbar() {
+import React from 'react';
+import { NavLink } from 'react-router-dom';
+
+export default function Navbar({ links }) {
     return (
         <div>
             <nav className='navbar navbar-expand-lg bg-body-tertiary fixed-top'>
@@ -9,25 +10,15 @@ export default function Navbar() {
                     <button className='navbar-toggler' type='button' data-bs-toggle='collapse' data-bs-target='#navbarSupportedContent' aria-controls='navbarSupportedContent' aria-expanded='false' aria-label='Toggle navigation'>
                         <span className='navbar-toggler-icon'></span>
                     </button>
-                        <ul className='collapse navbar-collapse navbar-nav me-auto mb-2 mb-lg-0 justify-content-end'>
-                            <li className='nav-item'>
-                                <NavLink className='nav-link active' aria-current='page' to='/'>Home</NavLink>
+                    <ul className='collapse navbar-collapse navbar-nav me-auto mb-2 mb-lg-0 justify-content-end'>
+                        {links.map((link, index) => (
+                            <li key={index} className='nav-item'>
+                                <NavLink className='nav-link' to={link.path}>{link.name}</NavLink>
                             </li>
-                            <li className='nav-item'>
-                                <NavLink className='nav-link' to='/'>Available Rides</NavLink>
-                            </li>
-                            <li className='nav-item'>
-                                <NavLink className='nav-link' to='/'>Profile</NavLink>
-                            </li>
-                            <li className='nav-item'>
-                                <NavLink className='nav-link' to='/'>Support</NavLink>
-                            </li>
-                            <li className='nav-item'>
-                                <NavLink className='nav-link' to='/'>Logout</NavLink>
-                            </li>
-                        </ul>
+                        ))}
+                    </ul>
                 </div>
             </nav>
         </div>
-    )
+    );
 }
