@@ -1,6 +1,6 @@
 import React from 'react';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faCar, faUser, faSackDollar, faLocationDot, faHeadphones, faCreditCard } from '@fortawesome/free-solid-svg-icons';
+import { faCar, faUser, faSackDollar, faLocationDot, faHeadphones, faFilePen } from '@fortawesome/free-solid-svg-icons';
 
 export default function UserCard(props) {
     const icons = {
@@ -8,8 +8,8 @@ export default function UserCard(props) {
         user: faUser,
         dollarSign: faSackDollar,
         dotCircle: faLocationDot,
+        creditCard: faFilePen,
         headphones: faHeadphones,
-        creditCard: faCreditCard,
     };
 
     const handleButtonClick = () => {

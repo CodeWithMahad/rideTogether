@@ -1,6 +1,7 @@
 import Main from "./Components/Main";
 import Login from './Components/Login';
-import Signup from './Components/Signup';
+import DriverSignup from './Components/DriverSignup';
+import PassenderSignUp from './Components/PassenderSignUp';
 import Verify from './Components/Verify';
 import HomePage from './Components/HomePage'
 import { BrowserRouter,Route,Routes } from 'react-router-dom';
@@ -14,7 +15,9 @@ function App() {
 
         <Route path="/" element={<HomePage/>}/>
         <Route path="/Login" element={<Login/>}/>
-        <Route path="/Signup" element={<Signup/>}/>
+        <Route path="/Signup" element={<HomePage/>}/>
+        <Route path="/DriverSignup" element={<DriverSignup/>}/>
+        <Route path="/PassengerSignup" element={<PassenderSignUp/>}/>
         <Route path="/Verify" element={<Verify/>}/>
         <Route path="/home" element={<Main/>}/>
       </Routes>
