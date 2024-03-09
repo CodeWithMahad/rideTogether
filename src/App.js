@@ -2,8 +2,8 @@ import Main from "./Components/Main";
 import Login from './Components/Login';
 import DriverSignup from './Components/DriverSignup';
 import PassenderSignUp from './Components/PassenderSignUp';
-import Verify from './Components/Verify';
 import HomePage from './Components/HomePage'
+import DriverHome from './Components/DriverHome'
 import { BrowserRouter,Route,Routes } from 'react-router-dom';
 
 function App() {
@@ -17,8 +17,8 @@ function App() {
         <Route path="/Login" element={<Login/>}/>
         <Route path="/Signup" element={<HomePage/>}/>
         <Route path="/DriverSignup" element={<DriverSignup/>}/>
+        <Route path="/DriverHome" element={<DriverHome/>}/>
         <Route path="/PassengerSignup" element={<PassenderSignUp/>}/>
-        <Route path="/Verify" element={<Verify/>}/>
         <Route path="/home" element={<Main/>}/>
       </Routes>
     </BrowserRouter>

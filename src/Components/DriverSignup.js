@@ -8,7 +8,7 @@ export default function DriverSignup() {
   const [licensePic, setLicensePic] = useState(null);
 
   const handleClick = () => {
-    navigate('/Home');
+    navigate('/DriverHome');
   }
 
   const handleProfilePicChange = (event) => {
