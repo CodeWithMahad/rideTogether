@@ -3,7 +3,6 @@ import homePic1 from '../Images/homePic1.jpg'
 import Card from './Card';
 import Navbar from './Navbar';
 import Footer from './Footer';
-
 export default function Main() {
     const divStyle = {
         background: `url(${homePic1}) no-repeat fixed`,
@@ -15,7 +14,6 @@ export default function Main() {
                 { name: 'Home', path: '/' },
                 { name: 'Available Rides', path: '/rides' },
                 { name: 'Profile', path: '/profile' },
-                { name: 'Support', path: '/support' },
                 { name: 'Logout', path: '/' },
             ]} />
 

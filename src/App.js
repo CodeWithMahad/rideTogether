@@ -4,6 +4,7 @@ import DriverSignup from './Components/DriverSignup';
 import PassenderSignUp from './Components/PassenderSignUp';
 import HomePage from './Components/HomePage'
 import DriverHome from './Components/DriverHome'
+import Profile from './Components/Profile'
 import { BrowserRouter,Route,Routes } from 'react-router-dom';
 
 function App() {
@@ -19,6 +20,7 @@ function App() {
         <Route path="/DriverSignup" element={<DriverSignup/>}/>
         <Route path="/DriverHome" element={<DriverHome/>}/>
         <Route path="/PassengerSignup" element={<PassenderSignUp/>}/>
+        <Route path="/profile" element={<Profile/>}/>
         <Route path="/home" element={<Main/>}/>
       </Routes>
     </BrowserRouter>
