@@ -12,19 +12,19 @@ export default function Main() {
         <>
             <Navbar links={[
                 { name: 'Home', path: '/' },
-                { name: 'Available Rides', path: '/rides' },
-                { name: 'Profile', path: '/profile' },
-                { name: 'Logout', path: '/' },
+                { name: 'Available Rides', path: '/rides' }
             ]} />
 
             <div className='mt-5 pt-5 w-100' style={{ ...divStyle, height: '91.5vh' }}>
                 <div className="container">
                     <div className="col-3 mt-5 pt-5 ms-4">
-                        <input className='form-control rounded-pill' type="text" placeholder='Pickup' />
-                        <input className='form-control mt-4 rounded-pill' type="text" placeholder='Drop' />
-                        <div className="d-grid mt-4">
-                            <button style={{ backgroundColor: '#091F5B' }} type="button" className="btn rounded-pill text-white">search for cabs</button>
-                        </div>
+                        <form action="">
+                            <input className='form-control ' type="text" placeholder='Pickup' style={{borderRadius:'10px'}} />
+                            <input className='form-control mt-4 ' type="text" placeholder='Drop' style={{borderRadius:'10px'}} />
+                            <div className="d-grid mt-4">
+                                <button style={{ backgroundColor: '#091F5B',borderRadius:'10px' }} type="button" className="btn text-white">search for cabs</button>
+                            </div>
+                        </form>
                     </div>
                 </div>
             </div>

@@ -1,5 +1,6 @@
 import React from 'react';
 import { NavLink } from 'react-router-dom';
+import MyModal from './myModal'
 
 export default function Navbar({ links, showIcons, icon }) {
     return (
@@ -19,6 +20,7 @@ export default function Navbar({ links, showIcons, icon }) {
                             </li>
                         ))}
                     </ul>
+                    <MyModal />
                 </div>
             </nav>
         </div>
