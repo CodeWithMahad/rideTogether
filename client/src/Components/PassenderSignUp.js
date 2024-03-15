@@ -1,11 +1,12 @@
-import React, { useState } from 'react';
-import { useNavigate } from 'react-router-dom';
+import React, { useState,useEffect } from 'react';
 import Navbar from './Navbar';
+import { useNavigate, useLocation } from 'react-router-dom';
 
 export default function DriverSignup() {
   const navigate = useNavigate();
   const [profilePic, setProfilePic] = useState(null);
   const [licensePic, setLicensePic] = useState(null);
+  const location = useLocation();
 
   const handleClick = () => {
     navigate('/Home');
@@ -19,12 +20,21 @@ export default function DriverSignup() {
     setLicensePic(event.target.files[0]);
   }
 
+  useEffect(() => {
+    if (location.pathname === '/Signup') {
+      let elem = document.getElementById('SignUpDiv');
+      if (elem) {
+        elem.scrollIntoView({ behavior: "smooth" });
+      }
+    }
+  }, [location]);
+
   return (
     <div>
       <Navbar links={[
         { name: 'Home', path: '/' },
         { name: 'Login', path: '/Login' },
-        { name: 'Signup', path: '#SignUpDiv' },
+        { name: 'Signup', path: '/Signup' },
       ]} />
       <div className='container mt-5 pt-4'>
         <div className="row justify-content-center">
