@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import Navbar from './Navbar';
+import RideForm from './RideForm';
 
 export default function DriverHome() {
     const [image, setImage] = useState('');
@@ -58,10 +59,12 @@ export default function DriverHome() {
                                     <label htmlFor="image" className="form-label">Image of Car</label>
                                     <input type="file" className="form-control" id="image" onChange={(e) => setImage(e.target.value)} />
                                 </div>
-                                <div className="mb-3">
-                                    <input type="text" className="form-control" placeholder="Car Name" id="carName" value={carName} onChange={(e) => setCarName(e.target.value)} />
-                                </div>
                                 <div className="row mb-3">
+                                    <div className="col">
+                                        <div className="mb-3">
+                                            <input type="text" className="form-control" placeholder="Car Name" id="carName" value={carName} onChange={(e) => setCarName(e.target.value)} />
+                                        </div>
+                                    </div>
                                     <div className="col">
                                         <input type="text" className="form-control" placeholder="Car Model" id="carModel" value={carModel} onChange={(e) => setCarModel(e.target.value)} />
                                     </div>
@@ -75,9 +78,6 @@ export default function DriverHome() {
                                     </div>
                                     <div className="col">
                                         <input type="time" className="form-control" placeholder="Time" id="time" value={time} onChange={(e) => setTime(e.target.value)} />
-                                    </div>
-                                    <div className="col">
-                                        <input type="number" className="form-control" placeholder="Cost Per Seat" id="costPerSeat" value={costPerSeat} onChange={(e) => setCostPerSeat(e.target.value)} />
                                     </div>
                                 </div>
                                 {routes.map((route, index) => (
@@ -103,7 +103,7 @@ export default function DriverHome() {
                                 </div>
                                 <div className="mb-3">
                                     <select className="form-select" placeholder="Refreshment" id="refreshment" value={refreshment} onChange={(e) => setRefreshment(e.target.value)}>
-                                        <option value="">Select</option>
+                                        <option value="">Refreshment</option>
                                         <option value="Water">Water</option>
                                         <option value="Tea">Tea</option>
                                         <option value="Coffee">Coffee</option>
@@ -112,7 +112,7 @@ export default function DriverHome() {
                                 <div className="mb-3">
                                     <input type="tel" className="form-control" placeholder="Whatsapp Number" id="phoneNumber" value={phoneNumber} onChange={(e) => setPhoneNumber(e.target.value)} />
                                 </div>
-                                <button type="submit" className="btn btn-primary">Request Booking</button>
+                                <button type="submit" className="btn btn-primary">Insert Schedule</button>
                             </form>
                         </div>
                     </div>
