@@ -44,6 +44,6 @@ const PassengerSchema = new Schema({
       },
 })
 
-const Passenger = mongoose.Model('Passenger', PassengerSchema)
+const Passenger = mongoose.model('Passenger', PassengerSchema)
 
 module.exports = Passenger
