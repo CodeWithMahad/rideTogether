@@ -8,8 +8,8 @@ export default function DriverHome() {
     return (
         <div>
             <Navbar links={[
-            ]} />
-            <div className="col-lg-3">
+             ]} />
+            <div className="">
                 <SideBar />
             </div>
         </div>

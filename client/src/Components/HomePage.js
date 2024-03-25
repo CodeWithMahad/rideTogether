@@ -44,7 +44,7 @@ export default function HomePage() {
             <div className='container' style={{ ...divStyle }}>
                 <div className="">
                     <div className="row ">
-                        <div className="col-lg-12 mt-2 text-center bg-black opacity-50">
+                        <div className="col-lg-12 mt-2 text-center bg-black opacity-50 ">
                             <h1 className="mt-4 pt-4 text-white display-8 opacity-100" style={{ color: '#091F5B' }}>WE CONNECT DRIVERS & PASSENGERS</h1>
                         </div>
                     </div>
