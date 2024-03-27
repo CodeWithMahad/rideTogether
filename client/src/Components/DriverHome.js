@@ -4,14 +4,12 @@ import SideBar from './SideBar';
 
 export default function DriverHome() {
 
-
     return (
         <div>
             <Navbar links={[
-             ]} />
-            <div className="">
-                <SideBar />
-            </div>
+            ]} />
+            <SideBar />
+            
         </div>
     );
 }

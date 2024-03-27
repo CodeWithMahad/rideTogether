@@ -6,8 +6,8 @@ import DriverSignup from './Components/DriverSignup';
 import PassenderSignUp from './Components/PassenderSignUp';
 import HomePage from './Components/HomePage';
 import DriverHome from './Components/DriverHome';
-import Profile from './Components/Profile';
 import ScrollToTop from './Components/ScrollToTop';
+import DriverProfile from './Components/DriverProfile';
 
 function App() {
   return (
@@ -19,9 +19,9 @@ function App() {
           <Route path="/Login" element={<Login/>}/>
           <Route path="/Signup" element={<HomePage/>}/>
           <Route path="/DriverSignup" element={<DriverSignup/>}/>
+          <Route path="/DriverProfile" element={<DriverProfile/>}/>
           <Route path="/DriverHome" element={<DriverHome/>}/>
           <Route path="/PassengerSignup" element={<PassenderSignUp/>}/>
-          <Route path="/profile" element={<Profile/>}/>
           <Route path="/home" element={<Main/>}/>
         </Routes>
       </BrowserRouter>

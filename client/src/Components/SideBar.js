@@ -17,7 +17,7 @@ const SideBar = () => {
             </Link>
             <ul className="nav nav-pills flex-column mb-sm-auto mb-0 align-items-center align-items-sm-start" id="menu">
               <li className="nav-item">
-                <Link to='/' className="nav-link align-middle px-0">
+                <Link to='/DriverProfile' className="nav-link align-middle px-0">
                   <i className="fs-4 bi-house"></i> <span className="ms-1 d-none d-sm-inline text-decoration-none" style={{ color: '#091F5B' }}>Profile</span>
                 </Link>
               </li>
